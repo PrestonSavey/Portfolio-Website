@@ -3,6 +3,8 @@
 export const profile = {
   name: 'Preston Savey',
   role: 'Full Stack Software Engineer',
+  // Cycled by the scramble effect in the hero. The first one is what screen readers hear.
+  rolePhrases: ['Full Stack Software Engineer', 'Frontend Lead', 'Angular + React Developer', 'C# + Azure Builder'],
   tagline:
     'I build production web apps with Angular, React, TypeScript, C# and Azure — five years of shipping enterprise healthcare software used by thousands.',
   location: 'Open to roles in New York, NY',
@@ -25,6 +27,8 @@ export type Job = {
   location: string
   dates: string
   bullets: string[]
+  // Used by the skill filter — only list tech this role actually used.
+  skills: string[]
 }
 
 export const experience: Job[] = [
@@ -38,6 +42,7 @@ export const experience: Job[] = [
       'Built patient-enrollment data visualization tools with AG Grid, AG Charts and billboard.js, saving the company millions of dollars in expenses.',
       'Partnered with business stakeholders to find workflow inefficiencies and ship software that streamlined clinical trial operations.',
     ],
+    skills: ['AG Grid', 'AG Charts'],
   },
   {
     title: 'Full Stack Software Engineer I',
@@ -49,6 +54,7 @@ export const experience: Job[] = [
       'Represented frontend initiatives in IT architecture discussions.',
       'Implemented Azure cloud infrastructure to support scalable application delivery.',
     ],
+    skills: ['Azure'],
   },
   {
     title: 'Full Stack Software Engineer Intern',
@@ -59,6 +65,7 @@ export const experience: Job[] = [
       'Developed Angular frontends and C# APIs for a cross-platform clinical trial app (web, iOS, Android) used in Pfizer COVID-19 vaccine studies, enabling remote patient participation and data collection.',
       'Built a Patient Engagement project to raise trial participation, including automatic Uber ride scheduling and participant progress tracking.',
     ],
+    skills: ['Angular', 'C#', 'REST APIs'],
   },
 ]
 
@@ -117,6 +124,13 @@ export const projects: Project[] = [
     details: [],
     stack: ['Angular', 'Google Maps API'],
   },
+]
+
+export const stats = [
+  { value: 5, suffix: '+', label: 'years shipping software' },
+  { value: 3, label: 'production apps delivered' },
+  { value: 3, label: 'platforms: web, iOS, Android' },
+  { value: 4, label: 'party games built' },
 ]
 
 export const skills: { group: string; items: string[] }[] = [
